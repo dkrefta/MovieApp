@@ -1,0 +1,29 @@
+{
+    "presets": ["@babel/preset-env", "@babel/preset-react"],
+    "env": {
+      "test": {
+        "presets": ["@babel/preset-env", "@babel/preset-react"]
+      },
+      "production": {
+        "presets": [
+          ["@babel/preset-env", { "modules": false }],
+          "@babel/preset-react"
+        ]
+      }
+    },
+    "plugins": [
+      "emotion",
+      ["@babel/plugin-proposal-decorators", { "legacy": true }],
+      ["@babel/plugin-proposal-class-properties", { "loose": true }],
+      "@babel/plugin-transform-runtime",
+      "@babel/plugin-syntax-dynamic-import",
+      "babel-plugin-transform-react-remove-prop-types",
+      [
+        "module-resolver",
+        {
+          "root": ["./src"]
+        }
+      ]
+    ]
+  }
+  

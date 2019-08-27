@@ -1,0 +1,53 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["airbnb", "plugin:jest/recommended"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  },
+  "plugins": ["react", "jest"],
+  "rules": {
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".js", ".jsx"] }
+    ],
+    "import/prefer-default-export": "off",
+    "react/no-deprecated": "off",
+    "no-shadow": "off",
+    "no-underscore-dangle": "off",
+    "react/destructuring-assignment": "off",
+    "react/forbid-prop-types": "off",
+    "react/no-this-in-sfc": "off",
+    "no-param-reassign": "off",
+    "no-return-await": "warn",
+    "no-unused-vars": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/prop-types": "off",
+    "import/no-named-as-default": "off",
+    "react/require-default-prop": "off",
+    "react/require-default-props": "warn",
+    "react/no-unused-prop-types": "warn",
+    "react/no-array-index-key": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "radix": "off",
+    "no-unused-expressions": "off"
+  }
+}
